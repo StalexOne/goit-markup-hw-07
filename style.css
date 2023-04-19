@@ -51,15 +51,27 @@ button {
     border-radius: 4px;
 }
 
-.container {
-    width: 1158px;
-    padding: 0 15px;
-    margin: 0 auto;
+img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
+.container {
+    /* width: 1158px; */
+    width: 100%;
+    padding: 0 16px;
+    /* padding: 0 15px; */
+    margin: 0 auto;
+    }
+
+
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .no-scroll {
@@ -237,14 +249,10 @@ padding: 188px 0;}
 
 
 /* ----------------------------------------SECTION ------------------------------*/
-.flex {
+/* .flex {
     display: flex;
-}
-.team{
-    background-color: var(--secondary-text-color);
-    padding-bottom: 120px;
-    padding-top: 120px;
-}
+} */
+
 
 .section-titales {
     margin-bottom: 72px;
@@ -264,40 +272,54 @@ padding: 188px 0;}
     }
 .section-item {
     margin-bottom: 8px;
+    text-align: center;
     color: var(--titel-text-color);
-    font-weight: 500;
+    font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+    /* font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 1.2; */
     letter-spacing: 0.02em;
+
     }
 
 .exp {
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     color: var(--primary-text-color);
-    letter-spacing: 0.02em;}
+    letter-spacing: 0.02em;
+   }
+
 /* -----------------------------------------------VOLUES OF THE COMPANY--------------------------------- */
 .icon-frame {
-    display: flex;
+    display: none;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     height: 112px;
     background-color: var(--secondary-text-color);
     border-radius: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 8px; */
 }
+
+
+/* .item.volues:not(:last-child) {margin-bottom: 72px;} */
 /* -------------------------------------------------CARD--------------------------*/
 
 .card {
-    display: flex;}
+    /* display: flex;} */
+display: block;}
 
 .card .item+.item {
-    margin-left: 24px;}
-.card.teams > .item {
-    flex-basis: calc(100% / 3 - 24px);
-background-color: var(--back-main-color);
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    /* margin-left: 24px; */
+    margin-left: 0;
 }
+
+
 
 .card.we-doing >.item {
     flex-basis: calc(100% / 2 - 24px);}
@@ -305,11 +327,29 @@ background-color: var(--back-main-color);
 
 /* ----------------------------------------WE ARE DOING --------------------------------------------*/
 .section-we-doing {
-    padding-bottom: 120px;
+    display: none;
+    /* padding-bottom: 120px; */
 }
 
 
 /*------------------------------------------ OUR TEAM-------------------------------------- */
+.team {
+    background-color: var(--secondary-text-color);
+    /* padding-bottom: 120px;
+    padding-top: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+.card.teams {
+    flex-wrap: wrap;
+}
+.card.teams > .item {
+   
+        /* flex-basis: calc(100% / 3 - 24px); */
+background-color: var(--back-main-color);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 .card-content {
     padding: 32px 16px;}
@@ -323,7 +363,9 @@ background-color: var(--back-main-color);
     display: flex;
     align-items: flex-start;
     margin: 8px 0px 0px 0px;
-    gap: 0px 24px;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
 }
 .social-link {
     display: flex;
@@ -753,7 +795,7 @@ outline: transparent;
     letter-spacing: 0.01em;
 }
 
-..icon-checkbox {
+.icon-checkbox {
     border: 1px solid rgba(46, 47, 66, 0.4);;
 }
 
@@ -914,3 +956,98 @@ margin-bottom: 8px;
 .check__input:checked:disabled + .check__box {
   background-color: #9B9B9B;
 }
+
+
+/* ---------------------------MOBILE-------428px------------- */
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 426px;} 
+     
+    
+    .item.volues:not(:last-child) {
+        margin-bottom: 72px;}
+        .card.teams > .item {margin-bottom: 72px;}
+    .card.teams > .item:last-child {margin-bottom: 0;} }
+
+    .social-networks {
+        display: flex;
+        align-items: center;
+        margin: 8px 0px 0px 0px;
+        gap: 0px 24px;
+    }
+/* ------------------------------TABLET-------768px-------------- */
+
+@media screen and (min-width: 768px)
+{
+    .container {
+        max-width: 736px;}
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -24px;}
+
+    .item.volues {
+        flex-basis: calc((100% - 56px) / 2);
+        margin-right: 24px;
+    }
+    .card-teams {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -24px;
+        flex-basis: calc((100% - 24px) / 4);
+        margin-right: 56px;
+    }
+    .section-item {text-align: left;}
+}
+/* -------------------------------?????----------------------------- */
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .item.volues:nth-child(-n + 2) {
+        margin-bottom: 72px;    }
+    }
+/* ----------------DESCTOP---------- 1158px-------------------- */
+@media screen and (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .container {
+       max-width: 1158px;
+       padding: 0 15px;
+        margin: 0 auto;
+        }
+        .card {
+            display: flex;
+            margin-right: -24px;}
+    .icon-frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        background-color: var(--secondary-text-color);
+        border-radius: 4px;
+        margin-bottom: 8px;}
+    .section-item {
+        margin-bottom: 8px;
+        text-align: center;
+        color: var(--titel-text-color);
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;}
+              
+        .item.volues {
+            flex-basis: calc((100% - 96px) / 4);
+            margin-right: 24px;}
+
+
+        .section-we-doing {
+            padding-bottom: 120px;
+            display: flex;
+            }
+
+        .card-we-doing {
+            display: flex;
+            gap: 24px;}
+            
+        }
