@@ -431,9 +431,8 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
-        letter-spacing: 0.02em;
         text-transform: capitalize;
-        letter-spacing: 0.02em;}
+        }
 
 
 .exp {
@@ -495,7 +494,6 @@ display: block;}
 }
 .card-teams .item {
     width: 264px;
-    margin: 0 auto;
     background-color: var(--back-main-color);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -1154,7 +1152,17 @@ margin-bottom: 8px;
   background-color: #9B9B9B;
 }
 
+/* -----------------------------MOBILE----320px-------------- */
+@media screen and (max-width: 427px) {
 
+    .auth-mobile > .item.number {
+        font-size: 28px;}
+
+        .social-networks-mobile {
+            gap: 30px;
+        }
+
+}
 /* ---------------------------MOBILE-------428px------------- */
 @media screen and (max-width: 767px) {
 
@@ -1171,7 +1179,8 @@ margin-bottom: 8px;
         max-width: 100%;
     }
 
-    
+    .card-teams .item {
+                margin: 0 auto;}
 
     .main-nav {
         align-items: center;
@@ -1216,7 +1225,10 @@ text-transform: capitalize;
     
     .footer-logoblock {
         text-align: center;
+        margin-bottom: 72px;
         }
+
+        
     .footer-titele {
         text-align: left;
         margin-left: auto;
@@ -1229,7 +1241,9 @@ text-transform: capitalize;
         margin-left: auto;
         margin-right: auto;
             }
-    
+     .footer-logoblock {
+        margin-bottom: 72px;
+    }
             .button-footer {
                 margin-top: 16px;
             }
@@ -1263,6 +1277,10 @@ text-transform: capitalize;
         overflow: scroll;
         }
 
+        .button-item:not(:last-child) {
+            margin-right: 0;
+        }
+
 }
 /* ------------------------------TABLET-------768px-------------- */
 
@@ -1273,11 +1291,16 @@ text-transform: capitalize;
     .container {
         max-width: 768px;}
     
-
-    .card {
+        .card {
         display: flex;
         flex-wrap: wrap;
         margin-right: -24px;}
+
+        .section-item {
+            text-align: left;
+            
+
+        }
 
     .item.volues {
         flex-basis: calc((100% - 56px) / 2);
@@ -1321,11 +1344,13 @@ max-width: 550px;}
         flex-wrap: nowrap;
         }
         .section-img {
-              gap: 72px 12px;
+              gap: 72px 24px;
       position: relative;
      
       justify-content: left;
       }
+
+   
 
       .mobile-menu-open {
         display: none;
@@ -1333,9 +1358,7 @@ max-width: 550px;}
 }
 /* -------------------------------?????----------------------------- */
 @media screen and (max-width: 1157px) {
-    .footer-logoblock {
-        margin-bottom: 72px;
-    }
+   
 
     .footer-label ::placeholder{
     opacity: 0.6;}
@@ -1349,6 +1372,18 @@ max-width: 550px;}
             gap: 72px 24px;
         }
 
+        .mailing-block {
+            margin-top: 16px;
+           }
+           .section-item {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+           }
     }
     
 
@@ -1363,6 +1398,11 @@ max-width: 550px;}
         gap: 72px 24px;
         }
         
+        .hero 
+        {max-width: 768px;
+            height: 436px;
+            padding: 112px 0;}
+
 ul.auth-nav {
     display: flex;
     flex-direction: column;
@@ -1375,12 +1415,14 @@ ul.auth-nav {
 .footer-input {
    width: 264px;
   }
-   .mailing-block {
-    margin-top: 16px;
-   }
-
-
-
+   
+  .auth-nav .link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+  }
+  
 }
 /* ----------------DESCTOP---------- 1158px-------------------- */
 @media screen and (min-width: 1158px) {
@@ -1410,7 +1452,9 @@ ul.auth-nav {
     .item.volues {
         flex-basis: calc((100% - 96px) / 4);
         margin-right: 24px;}
-
+        .item.volues > .exp {
+            font-weight: 400;
+        }
 
     .section-we-doing {
         padding-bottom: 120px;
